@@ -20,17 +20,17 @@ public class Semana3 {
 		System.out.println("Entre com o curso:");
 		aluno.setCurso( input.nextLine() );
 		
-		System.out.println("Entre com a disciplina 1:");
-		Disciplina disciplina = new Disciplina();
-		
-		disciplina.setDescricao(input.next());
-		disciplina.setTurno("noite");
-		
-		aluno.disciplinas.add(disciplina);
-		
-		aluno.mostrarLog();
-		
+		for (int i = 0; i < 2; i++) {
+			System.out.println("Entre com a disciplina #" + i + ":");
 
+			Disciplina disciplina = new Disciplina();
+			disciplina.setDescricao(input.next());
+			disciplina.setTurno("noite");
+			aluno.disciplinas.add(disciplina);
+		}
+		input.close();
+
+		aluno.mostrarLog();
 	}
 
 }

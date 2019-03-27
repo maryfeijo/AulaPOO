@@ -14,7 +14,7 @@ public class Aluno {
 	public Aluno()
 	{
 		this.curso = "Direito";
-		this.disciplinas = new ArrayList<>();
+		this.disciplinas = new ArrayList<Disciplina>();
 	}
 	
 	public Aluno(String curso)
@@ -39,6 +39,11 @@ public class Aluno {
 		System.out.println("Matricula =" + this.matricula);
 		System.out.println("Nome =" + this.nome);
 		System.out.println("Curso =" + this.curso);
+		
+		System.out.println("matriculado nas disciplinas:");
+		for (int i = 0; i < this.disciplinas.size(); i++) {
+			System.out.println(" #"+i+": " + disciplinas.get(i).getDescricao());
+		}
 	}
 
 	public String getNome() {
@@ -55,7 +60,7 @@ public class Aluno {
 
 	public void setCurso(String curso) {
 		if (curso.equalsIgnoreCase("si"))
-			this.curso = "Sistemas de Informação";
+			this.curso = "Sistemas de Informaï¿½ï¿½o";
 		else
 			this.curso = curso;
 	}
